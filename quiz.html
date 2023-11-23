@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="quiz.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quiz</title>
+
+    <style>
+        .center {
+        margin: auto;
+        width: 60%;
+        border: 3px solid #73AD21;
+        padding: 10px;
+        }
+
+        .btn{
+            padding: 10px 14px;
+            border-radius: 5px;
+            border: 2px solid black;
+            background-color: crimson;
+            outline: none;
+            display: block;
+            margin: auto;
+            color: #fff;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+        }
+
+        .btn:hover{
+            background-color: green;
+        }
+        a{
+            text-decoration: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>Python Multiple Choice Questions</h1>
+        <div id="quiz-container"></div>
+            <div id="question-container">
+                <p id="question"></p>
+            </div>
+            <div id="answer-container">
+                <button class="answer-btn" onclick="call_back(checkAnswer(0))"></button>
+                <button class="answer-btn" onclick="call_back(checkAnswer(1))"></button>
+                <button class="answer-btn" onclick="call_back(checkAnswer(2))"></button>
+                <button class="answer-btn" onclick="call_back(checkAnswer(3))"></button>
+            </div>
+        </div>
+    </div>
+    <p id="result"></p>
+    <div class="center">
+        <button class="btn" id="start-again" onclick="st_again()">Start Again</button>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
